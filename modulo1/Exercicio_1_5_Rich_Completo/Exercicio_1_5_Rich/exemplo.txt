@@ -1,3 +1,0 @@
-Olá! Este é um arquivo de exemplo.
-O pacote personalizador usa a biblioteca Rich.
-Experimente diferentes módulos e funções!
