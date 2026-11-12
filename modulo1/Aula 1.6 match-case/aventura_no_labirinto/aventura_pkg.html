@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: Aventura no Labirinto — documentação</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+<section id="aventura_pkg">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>aventura_pkg</strong></big></big> (version 1.0.0)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br>código-fonte incluído no projeto</font></td></tr></table>
+    <p><tt>Aventura&nbsp;no&nbsp;Labirinto:&nbsp;geração&nbsp;de&nbsp;mapas,&nbsp;jogador&nbsp;e&nbsp;interface&nbsp;de&nbsp;terminal.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Package Contents</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="#aventura_pkg.jogador">jogador</a><br>
+</td><td width="25%" valign=top><a href="#aventura_pkg.labirinto">labirinto</a><br>
+</td><td width="25%" valign=top><a href="#aventura_pkg.utils">utils</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table></section>
+<section id="aventura_pkg.labirinto">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="#aventura_pkg"><font color="#ffffff">aventura_pkg</font></a>.labirinto</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br>código-fonte incluído no projeto</font></td></tr></table>
+    <p><tt>Gera&nbsp;labirintos&nbsp;aleatórios&nbsp;conectados&nbsp;e&nbsp;os&nbsp;apresenta&nbsp;com&nbsp;Rich.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="#aventura_pkg.labirinto#Labirinto">Labirinto</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Labirinto">class <strong>Labirinto</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Labirinto">Labirinto</a>(grade:&nbsp;list[list[str]],&nbsp;inicio:&nbsp;tuple[int,&nbsp;int],&nbsp;saida:&nbsp;tuple[int,&nbsp;int],&nbsp;tesouros:&nbsp;set[tuple[int,&nbsp;int]])&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Guarda&nbsp;a&nbsp;matriz&nbsp;de&nbsp;paredes,&nbsp;entrada,&nbsp;saída&nbsp;e&nbsp;tesouros&nbsp;restantes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Labirinto-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Labirinto-__init__"><strong>__init__</strong></a>(self, grade: list[list[str]], inicio: tuple[int, int], saida: tuple[int, int], tesouros: set[tuple[int, int]]) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Labirinto-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="Labirinto-livre"><strong>livre</strong></a>(self, posicao: tuple[int, int]) -&gt; bool</dt><dd><tt>Indica&nbsp;se&nbsp;a&nbsp;posição&nbsp;está&nbsp;dentro&nbsp;do&nbsp;mapa&nbsp;e&nbsp;pode&nbsp;ser&nbsp;atravessada.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'grade': list[list[str]], 'inicio': tuple[int, int], 'saida': tuple[int, int], 'tesouros': set[tuple[int, int]]}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'grade': Field(name='grade',type=list[list[str]],default=...appingproxy({}),kw_only=False,_field_type=_FIELD), 'inicio': Field(name='inicio',type=tuple[int, int],default...appingproxy({}),kw_only=False,_field_type=_FIELD), 'saida': Field(name='saida',type=tuple[int, int],default=...appingproxy({}),kw_only=False,_field_type=_FIELD), 'tesouros': Field(name='tesouros',type=set[tuple[int, int]],...appingproxy({}),kw_only=False,_field_type=_FIELD)}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__match_args__</strong> = ('grade', 'inicio', 'saida', 'tesouros')</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-criar_labirinto"><strong>criar_labirinto</strong></a>(dificuldade: str = 'facil', seed: int | None = None) -&gt; aventura_pkg.labirinto.Labirinto</dt><dd><tt>Escava&nbsp;corredores&nbsp;por&nbsp;busca&nbsp;em&nbsp;profundidade&nbsp;com&nbsp;pilha&nbsp;e&nbsp;sorteia&nbsp;tesouros.<br>
+&nbsp;<br>
+A&nbsp;semente&nbsp;permite&nbsp;repetir&nbsp;um&nbsp;mapa.&nbsp;Todos&nbsp;os&nbsp;corredores&nbsp;ficam&nbsp;conectados;<br>
+a&nbsp;entrada&nbsp;e&nbsp;a&nbsp;saída&nbsp;nunca&nbsp;recebem&nbsp;tesouros.&nbsp;Não&nbsp;usa&nbsp;mapas&nbsp;pré-escritos.</tt></dd></dl>
+ <dl><dt><a name="-imprimir_labirinto"><strong>imprimir_labirinto</strong></a>(labirinto: aventura_pkg.labirinto.Labirinto, posicao: tuple[int, int], cor: str = 'cyan') -&gt; rich.panel.Panel</dt><dd><tt>Monta&nbsp;um&nbsp;painel&nbsp;Rich&nbsp;do&nbsp;mapa,&nbsp;com&nbsp;jogador,&nbsp;saída&nbsp;e&nbsp;tesouros&nbsp;distintos.</tt></dd></dl>
+ <dl><dt><a name="-resolver_labirinto"><strong>resolver_labirinto</strong></a>(labirinto: aventura_pkg.labirinto.Labirinto, inicio: tuple[int, int] | None = None) -&gt; list[str] | None</dt><dd><tt>Retorna&nbsp;comandos&nbsp;WASD&nbsp;até&nbsp;a&nbsp;saída&nbsp;usando&nbsp;busca&nbsp;RECURSIVA&nbsp;com&nbsp;retrocesso.<br>
+&nbsp;<br>
+Retorna&nbsp;None&nbsp;se&nbsp;não&nbsp;existir&nbsp;caminho&nbsp;e&nbsp;[]&nbsp;se&nbsp;já&nbsp;estiver&nbsp;na&nbsp;saída.<br>
+A&nbsp;solução&nbsp;prioriza&nbsp;chegar&nbsp;à&nbsp;saída;&nbsp;não&nbsp;busca&nbsp;todos&nbsp;os&nbsp;tesouros.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DIRECOES</strong> = {'a': (0, -1), 'd': (0, 1), 's': (1, 0), 'w': (-1, 0)}<br>
+<strong>Posicao</strong> = tuple[int, int]<br>
+<strong>TAMANHOS</strong> = {'dificil': 21, 'facil': 9, 'medio': 15}</td></tr></table></section>
+<section id="aventura_pkg.jogador">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="#aventura_pkg"><font color="#ffffff">aventura_pkg</font></a>.jogador</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br>código-fonte incluído no projeto</font></td></tr></table>
+    <p><tt>Controla&nbsp;estado,&nbsp;pontuação,&nbsp;movimentos&nbsp;e&nbsp;leitura&nbsp;de&nbsp;teclado&nbsp;com&nbsp;pynput.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="#aventura_pkg.jogador#Jogador">Jogador</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Jogador">class <strong>Jogador</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Jogador">Jogador</a>(nome:&nbsp;str,&nbsp;posicao:&nbsp;tuple[int,&nbsp;int],&nbsp;pontos:&nbsp;int&nbsp;=&nbsp;100,&nbsp;movimentos:&nbsp;int&nbsp;=&nbsp;0,&nbsp;coletados:&nbsp;int&nbsp;=&nbsp;0)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Mantém&nbsp;nome,&nbsp;posição,&nbsp;pontos,&nbsp;movimentos&nbsp;e&nbsp;quantidade&nbsp;de&nbsp;tesouros.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Jogador-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="Jogador-__init__"><strong>__init__</strong></a>(self, nome: str, posicao: tuple[int, int], pontos: int = 100, movimentos: int = 0, coletados: int = 0) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Jogador-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'coletados': &lt;class 'int'&gt;, 'movimentos': &lt;class 'int'&gt;, 'nome': &lt;class 'str'&gt;, 'pontos': &lt;class 'int'&gt;, 'posicao': tuple[int, int]}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'coletados': Field(name='coletados',type=&lt;class 'int'&gt;,defaul...appingproxy({}),kw_only=False,_field_type=_FIELD), 'movimentos': Field(name='movimentos',type=&lt;class 'int'&gt;,defau...appingproxy({}),kw_only=False,_field_type=_FIELD), 'nome': Field(name='nome',type=&lt;class 'str'&gt;,default=&lt;da...appingproxy({}),kw_only=False,_field_type=_FIELD), 'pontos': Field(name='pontos',type=&lt;class 'int'&gt;,default=1...appingproxy({}),kw_only=False,_field_type=_FIELD), 'posicao': Field(name='posicao',type=tuple[int, int],defaul...appingproxy({}),kw_only=False,_field_type=_FIELD)}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__match_args__</strong> = ('nome', 'posicao', 'pontos', 'movimentos', 'coletados')</dl>
+
+<dl><dt><strong>coletados</strong> = 0</dl>
+
+<dl><dt><strong>movimentos</strong> = 0</dl>
+
+<dl><dt><strong>pontos</strong> = 100</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-iniciar_jogador"><strong>iniciar_jogador</strong></a>(nome: str, labirinto: aventura_pkg.labirinto.Labirinto) -&gt; aventura_pkg.jogador.Jogador</dt><dd><tt>Cria&nbsp;o&nbsp;jogador&nbsp;na&nbsp;entrada&nbsp;com&nbsp;cem&nbsp;pontos&nbsp;e&nbsp;nenhum&nbsp;movimento.</tt></dd></dl>
+ <dl><dt><a name="-iniciar_teclado"><strong>iniciar_teclado</strong></a>(fila: queue.Queue)</dt><dd><tt>Inicia&nbsp;um&nbsp;Listener&nbsp;pynput&nbsp;que&nbsp;envia&nbsp;WASD,&nbsp;setas&nbsp;e&nbsp;Q/Esc&nbsp;à&nbsp;fila.<br>
+&nbsp;<br>
+O&nbsp;chamador&nbsp;deve&nbsp;parar&nbsp;o&nbsp;listener&nbsp;em&nbsp;finally.&nbsp;Não&nbsp;bloqueia&nbsp;teclas&nbsp;do&nbsp;sistema.<br>
+A&nbsp;importação&nbsp;tardia&nbsp;permite&nbsp;executar&nbsp;a&nbsp;demonstração&nbsp;sem&nbsp;servidor&nbsp;gráfico.</tt></dd></dl>
+ <dl><dt><a name="-mover"><strong>mover</strong></a>(jogador: aventura_pkg.jogador.Jogador, labirinto: aventura_pkg.labirinto.Labirinto, comando: str) -&gt; str</dt><dd><tt>Aplica&nbsp;um&nbsp;comando&nbsp;e&nbsp;retorna&nbsp;ignorado,&nbsp;parede,&nbsp;passo,&nbsp;tesouro&nbsp;ou&nbsp;vitoria.<br>
+&nbsp;<br>
+Somente&nbsp;movimentos&nbsp;válidos&nbsp;consomem&nbsp;o&nbsp;limite;&nbsp;a&nbsp;vitória&nbsp;pontua&nbsp;uma&nbsp;vez.</tt></dd></dl>
+ <dl><dt><a name="-pontuar"><strong>pontuar</strong></a>(jogador: aventura_pkg.jogador.Jogador, evento: str) -&gt; None</dt><dd><tt>Aplica&nbsp;-1&nbsp;por&nbsp;passo,&nbsp;-2&nbsp;por&nbsp;parede,&nbsp;+25&nbsp;por&nbsp;tesouro&nbsp;e&nbsp;+100&nbsp;por&nbsp;vitória.<br>
+&nbsp;<br>
+A&nbsp;pontuação&nbsp;nunca&nbsp;é&nbsp;negativa&nbsp;e&nbsp;não&nbsp;determina&nbsp;o&nbsp;fim&nbsp;da&nbsp;partida.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DIRECOES</strong> = {'a': (0, -1), 'd': (0, 1), 's': (1, 0), 'w': (-1, 0)}<br>
+<strong>Posicao</strong> = tuple[int, int]</td></tr></table></section>
+<section id="aventura_pkg.utils">
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="#aventura_pkg"><font color="#ffffff">aventura_pkg</font></a>.utils</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br>código-fonte incluído no projeto</font></td></tr></table>
+    <p><tt>Formata&nbsp;menus,&nbsp;instruções&nbsp;de&nbsp;arquivo,&nbsp;placar&nbsp;e&nbsp;resultado&nbsp;da&nbsp;partida.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-imprime_instrucoes"><strong>imprime_instrucoes</strong></a>(console) -&gt; None</dt><dd><tt>Lê&nbsp;o&nbsp;arquivo&nbsp;de&nbsp;instruções&nbsp;junto&nbsp;ao&nbsp;pacote&nbsp;e&nbsp;imprime&nbsp;Markdown&nbsp;com&nbsp;Rich.</tt></dd></dl>
+ <dl><dt><a name="-imprimir_menu"><strong>imprimir_menu</strong></a>(console, nome: str, cor: str) -&gt; None</dt><dd><tt>Mostra&nbsp;opções&nbsp;que&nbsp;serão&nbsp;tratadas&nbsp;por&nbsp;match-case&nbsp;no&nbsp;programa&nbsp;principal.</tt></dd></dl>
+ <dl><dt><a name="-imprimir_resultado"><strong>imprimir_resultado</strong></a>(console, jogador: aventura_pkg.jogador.Jogador, venceu: bool, motivo: str) -&gt; None</dt><dd><tt>Apresenta&nbsp;vitória&nbsp;ou&nbsp;derrota&nbsp;e&nbsp;despede-se&nbsp;do&nbsp;jogador&nbsp;com&nbsp;seu&nbsp;placar.</tt></dd></dl>
+ <dl><dt><a name="-montar_tela"><strong>montar_tela</strong></a>(labirinto: aventura_pkg.labirinto.Labirinto, jogador: aventura_pkg.jogador.Jogador, cor: str, limite: int, mensagem: str = '') -&gt; rich.console.Group</dt><dd><tt>Combina&nbsp;mapa,&nbsp;placar&nbsp;e&nbsp;legenda&nbsp;sem&nbsp;interpretar&nbsp;o&nbsp;nome&nbsp;como&nbsp;markup.</tt></dd></dl>
+</td></tr></table></section>
+</body></html>
